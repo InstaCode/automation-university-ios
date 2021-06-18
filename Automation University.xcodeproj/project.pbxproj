@@ -3,16 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		C128B91E267C32EC00154BB5 /* Automation_UniversityApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C128B91D267C32EC00154BB5 /* Automation_UniversityApp.swift */; };
-		C128B920267C32EC00154BB5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C128B91F267C32EC00154BB5 /* ContentView.swift */; };
+		C128B920267C32EC00154BB5 /* CourseDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C128B91F267C32EC00154BB5 /* CourseDetail.swift */; };
 		C128B922267C32EF00154BB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C128B921267C32EF00154BB5 /* Assets.xcassets */; };
 		C128B925267C32EF00154BB5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C128B924267C32EF00154BB5 /* Preview Assets.xcassets */; };
 		C128B930267C32EF00154BB5 /* Automation_UniversityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C128B92F267C32EF00154BB5 /* Automation_UniversityTests.swift */; };
 		C128B93B267C32EF00154BB5 /* Automation_UniversityUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C128B93A267C32EF00154BB5 /* Automation_UniversityUITests.swift */; };
+		C160C402267C5E7100AD8A29 /* HotReloading in Frameworks */ = {isa = PBXBuildFile; productRef = C160C401267C5E7100AD8A29 /* HotReloading */; };
+		C160C403267C664000AD8A29 /* HotReloading in Embed Frameworks */ = {isa = PBXBuildFile; productRef = C160C401267C5E7100AD8A29 /* HotReloading */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,10 +34,24 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		C160C404267C664000AD8A29 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C160C403267C664000AD8A29 /* HotReloading in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		C128B91A267C32EC00154BB5 /* Automation University.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Automation University.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C128B91D267C32EC00154BB5 /* Automation_UniversityApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Automation_UniversityApp.swift; sourceTree = "<group>"; };
-		C128B91F267C32EC00154BB5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C128B91F267C32EC00154BB5 /* CourseDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetail.swift; sourceTree = "<group>"; };
 		C128B921267C32EF00154BB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C128B924267C32EF00154BB5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C128B926267C32EF00154BB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C160C402267C5E7100AD8A29 /* HotReloading in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,7 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				C128B91D267C32EC00154BB5 /* Automation_UniversityApp.swift */,
-				C128B91F267C32EC00154BB5 /* ContentView.swift */,
+				C128B91F267C32EC00154BB5 /* CourseDetail.swift */,
 				C128B921267C32EF00154BB5 /* Assets.xcassets */,
 				C128B926267C32EF00154BB5 /* Info.plist */,
 				C128B923267C32EF00154BB5 /* Preview Content */,
@@ -140,12 +157,16 @@
 				C128B916267C32EC00154BB5 /* Sources */,
 				C128B917267C32EC00154BB5 /* Frameworks */,
 				C128B918267C32EC00154BB5 /* Resources */,
+				C160C404267C664000AD8A29 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "Automation University";
+			packageProductDependencies = (
+				C160C401267C5E7100AD8A29 /* HotReloading */,
+			);
 			productName = "Automation University";
 			productReference = C128B91A267C32EC00154BB5 /* Automation University.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +238,9 @@
 				Base,
 			);
 			mainGroup = C128B911267C32EC00154BB5;
+			packageReferences = (
+				C160C400267C5E7100AD8A29 /* XCRemoteSwiftPackageReference "HotReloading" */,
+			);
 			productRefGroup = C128B91B267C32EC00154BB5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,7 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C128B920267C32EC00154BB5 /* ContentView.swift in Sources */,
+				C128B920267C32EC00154BB5 /* CourseDetail.swift in Sources */,
 				C128B91E267C32EC00154BB5 /* Automation_UniversityApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,6 +355,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -351,6 +376,14 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-Xlinker",
+					"-interposable",
+					"-Xlinker",
+					"-undefined",
+					"-Xlinker",
+					dynamic_lookup,
+				);
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -420,12 +453,21 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Automation University/Preview Content\"";
 				DEVELOPMENT_TEAM = 4BUU48BDND;
+				ENABLE_BITCODE = NO;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Automation University/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"-Xlinker",
+					"-interposable",
+					"-Xlinker",
+					"-undefined",
+					"-Xlinker",
+					dynamic_lookup,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "io.instacode.Automation-University";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -463,12 +505,21 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4BUU48BDND;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "Automation UniversityTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"-Xlinker",
+					"-interposable",
+					"-Xlinker",
+					"-undefined",
+					"-Xlinker",
+					dynamic_lookup,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "io.instacode.Automation-UniversityTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -506,11 +557,20 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4BUU48BDND;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "Automation UniversityUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"-Xlinker",
+					"-interposable",
+					"-Xlinker",
+					"-undefined",
+					"-Xlinker",
+					dynamic_lookup,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "io.instacode.Automation-UniversityUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -580,6 +640,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C160C400267C5E7100AD8A29 /* XCRemoteSwiftPackageReference "HotReloading" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/johnno1962/HotReloading.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C160C401267C5E7100AD8A29 /* HotReloading */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C160C400267C5E7100AD8A29 /* XCRemoteSwiftPackageReference "HotReloading" */;
+			productName = HotReloading;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C128B912267C32EC00154BB5 /* Project object */;
 }
