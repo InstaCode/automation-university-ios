@@ -22,7 +22,7 @@ struct CourseDetail: View {
 
                 Spacer()
                 VStack {
-                    Text("4").font(.largeTitle)
+                    Text(course.credits).font(.largeTitle)
                     Text("CREDITS").font(.subheadline)
                 }
             }
@@ -43,6 +43,9 @@ struct CourseDetail: View {
 
 struct CourseDetail_Previews: PreviewProvider {
     static var previews: some View {
-        CourseDetail()
+
+        let course = Course(credits: 4, departmentId: "ICS", courseCode: 499, courseTitle: "Capstone Project", courseDescription: "<ICS-499 Capstone Description>", professorName: "Jim Jordan", locationName: "Walser Hall", roomNumber: "234")
+
+        CourseDetail(course: course)
     }
 }
