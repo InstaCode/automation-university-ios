@@ -10,9 +10,9 @@ import Foundation
 struct Course {
 	var credits: Int8
     var departmentId: String
-    var courseCode: Int16
-    var courseTitle: String
-    var courseDescription: String
+    var code: Int16
+    var title: String
+    var description: String
     var professorName: String
     var locationName: String
     var roomNumber: String

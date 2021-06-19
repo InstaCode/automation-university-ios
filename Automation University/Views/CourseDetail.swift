@@ -16,19 +16,19 @@ struct CourseDetail: View {
             Divider()
             HStack {
                 VStack(alignment: .leading) {
-                    Text("Course Name").font(.title)
-                    Text("Course Identifier").font(.subheadline)
+                    Text(course.title).font(.title)
+                    Text("\(course.departmentId)-\(String(course.code))").font(.subheadline)
                 }
 
                 Spacer()
                 VStack {
-                    Text(course.credits).font(.largeTitle)
+                    Text(String(course.credits)).font(.largeTitle)
                     Text("CREDITS").font(.subheadline)
                 }
             }
             Divider()
             VStack {
-                Text("Course Description").italic().bold()
+                Text(course.description).italic().bold()
             }
         }
         .eraseToAnyView()
@@ -44,7 +44,7 @@ struct CourseDetail: View {
 struct CourseDetail_Previews: PreviewProvider {
     static var previews: some View {
 
-        let course = Course(credits: 4, departmentId: "ICS", courseCode: 499, courseTitle: "Capstone Project", courseDescription: "<ICS-499 Capstone Description>", professorName: "Jim Jordan", locationName: "Walser Hall", roomNumber: "234")
+        let course = Course(credits: 4, departmentId: "ICS", code: 499, title: "Capstone Project", description: "<ICS-499 Capstone Description>", professorName: "Jim Jordan", locationName: "Walser Hall", roomNumber: "234")
 
         CourseDetail(course: course)
     }
