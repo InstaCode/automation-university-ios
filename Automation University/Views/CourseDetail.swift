@@ -17,7 +17,7 @@ struct CourseDetail: View {
             HStack {
                 VStack(alignment: .leading) {
                     Text(course.title).font(.title)
-                    Text("\(course.departmentId)-\(String(course.code))").font(.subheadline)
+                    Text("\(course.department)-\(String(course.code))").font(.subheadline)
                 }
 
                 Spacer()
@@ -43,9 +43,6 @@ struct CourseDetail: View {
 
 struct CourseDetail_Previews: PreviewProvider {
     static var previews: some View {
-
-        let course = Course(credits: 4, departmentId: "ICS", code: 499, title: "Capstone Project", description: "<ICS-499 Capstone Description>", professorName: "Jim Jordan", locationName: "Walser Hall", roomNumber: "234")
-
-        CourseDetail(course: course)
+        CourseDetail(course: courses[0])
     }
 }

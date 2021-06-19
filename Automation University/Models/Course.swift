@@ -6,14 +6,16 @@
 //
 
 import Foundation
+import SwiftUI
 
-struct Course {
-	var credits: Int8
-    var departmentId: String
-    var code: Int16
+struct Course: Hashable, Codable {
+    var url: String
+	var credits: String
+    var department: String
+    var code: String
     var title: String
     var description: String
-    var professorName: String
-    var locationName: String
-    var roomNumber: String
+    //var professorName: String
+    //var locationName: String
+    //var roomNumber: String
 }
