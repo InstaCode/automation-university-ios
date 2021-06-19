@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		C128B91E267C32EC00154BB5 /* Automation_UniversityApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C128B91D267C32EC00154BB5 /* Automation_UniversityApp.swift */; };
-		C128B920267C32EC00154BB5 /* CourseDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C128B91F267C32EC00154BB5 /* CourseDetail.swift */; };
 		C128B922267C32EF00154BB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C128B921267C32EF00154BB5 /* Assets.xcassets */; };
 		C128B925267C32EF00154BB5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C128B924267C32EF00154BB5 /* Preview Assets.xcassets */; };
 		C128B930267C32EF00154BB5 /* Automation_UniversityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C128B92F267C32EF00154BB5 /* Automation_UniversityTests.swift */; };
 		C128B93B267C32EF00154BB5 /* Automation_UniversityUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C128B93A267C32EF00154BB5 /* Automation_UniversityUITests.swift */; };
-		D3A67E53846AC90961B66DF8 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A67F8A7F3FA934483FF33D /* Course.swift */; };
+		D3A670499DED268E9D10F64F /* CourseDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A67E49186DE0880F825DE2 /* CourseDetail.swift */; };
+		D3A670C58D86EDE0FAB3ED58 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A675062E4E6F7BBF777E27 /* ModelData.swift */; };
+		D3A673FFBF87D70478244DF0 /* comp-sci-courses.json in Resources */ = {isa = PBXBuildFile; fileRef = D3A67901531389BAEE0C6D31 /* comp-sci-courses.json */; };
+		D3A67882F75CBD8B0317C01A /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A674CB9A4F2382861D709C /* Course.swift */; };
+		D3A67C889EF72806FD9DF4A2 /* CourseRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A67200FBC6EF550450D74F /* CourseRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +52,6 @@
 /* Begin PBXFileReference section */
 		C128B91A267C32EC00154BB5 /* Automation University.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Automation University.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C128B91D267C32EC00154BB5 /* Automation_UniversityApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Automation_UniversityApp.swift; sourceTree = "<group>"; };
-		C128B91F267C32EC00154BB5 /* CourseDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetail.swift; sourceTree = "<group>"; };
 		C128B921267C32EF00154BB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C128B924267C32EF00154BB5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C128B926267C32EF00154BB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -59,7 +61,11 @@
 		C128B936267C32EF00154BB5 /* Automation UniversityUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Automation UniversityUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C128B93A267C32EF00154BB5 /* Automation_UniversityUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Automation_UniversityUITests.swift; sourceTree = "<group>"; };
 		C128B93C267C32EF00154BB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D3A67F8A7F3FA934483FF33D /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Course.swift; path = Models/Course.swift; sourceTree = "<group>"; };
+		D3A67200FBC6EF550450D74F /* CourseRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseRow.swift; sourceTree = "<group>"; };
+		D3A674CB9A4F2382861D709C /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		D3A675062E4E6F7BBF777E27 /* ModelData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		D3A67901531389BAEE0C6D31 /* comp-sci-courses.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "comp-sci-courses.json"; sourceTree = "<group>"; };
+		D3A67E49186DE0880F825DE2 /* CourseDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,11 +117,12 @@
 			isa = PBXGroup;
 			children = (
 				C128B91D267C32EC00154BB5 /* Automation_UniversityApp.swift */,
-				C128B91F267C32EC00154BB5 /* CourseDetail.swift */,
 				C128B921267C32EF00154BB5 /* Assets.xcassets */,
 				C128B926267C32EF00154BB5 /* Info.plist */,
 				C128B923267C32EF00154BB5 /* Preview Content */,
-				D3A679BE742CF7413066AD33 /* Models */,
+				D3A673B5B9878391C92A17E3 /* Resources */,
+				D3A67F3B6646CBEA592D6F06 /* Models */,
+				D3A6700FBF3838C384ADC0DA /* Views */,
 			);
 			path = "Automation University";
 			sourceTree = "<group>";
@@ -146,12 +153,30 @@
 			path = "Automation UniversityUITests";
 			sourceTree = "<group>";
 		};
-		D3A679BE742CF7413066AD33 /* Models */ = {
+		D3A6700FBF3838C384ADC0DA /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D3A67F8A7F3FA934483FF33D /* Course.swift */,
+				D3A67E49186DE0880F825DE2 /* CourseDetail.swift */,
+				D3A67200FBC6EF550450D74F /* CourseRow.swift */,
 			);
-			name = Models;
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D3A673B5B9878391C92A17E3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D3A67901531389BAEE0C6D31 /* comp-sci-courses.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D3A67F3B6646CBEA592D6F06 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D3A674CB9A4F2382861D709C /* Course.swift */,
+				D3A675062E4E6F7BBF777E27 /* ModelData.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,6 +291,7 @@
 			files = (
 				C128B925267C32EF00154BB5 /* Preview Assets.xcassets in Resources */,
 				C128B922267C32EF00154BB5 /* Assets.xcassets in Resources */,
+				D3A673FFBF87D70478244DF0 /* comp-sci-courses.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,9 +316,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C128B920267C32EC00154BB5 /* CourseDetail.swift in Sources */,
 				C128B91E267C32EC00154BB5 /* Automation_UniversityApp.swift in Sources */,
-				D3A67E53846AC90961B66DF8 /* Course.swift in Sources */,
+				D3A670499DED268E9D10F64F /* CourseDetail.swift in Sources */,
+				D3A67C889EF72806FD9DF4A2 /* CourseRow.swift in Sources */,
+				D3A67882F75CBD8B0317C01A /* Course.swift in Sources */,
+				D3A670C58D86EDE0FAB3ED58 /* ModelData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
