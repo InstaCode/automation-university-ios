@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,8 +13,7 @@
 		C128B925267C32EF00154BB5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C128B924267C32EF00154BB5 /* Preview Assets.xcassets */; };
 		C128B930267C32EF00154BB5 /* Automation_UniversityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C128B92F267C32EF00154BB5 /* Automation_UniversityTests.swift */; };
 		C128B93B267C32EF00154BB5 /* Automation_UniversityUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C128B93A267C32EF00154BB5 /* Automation_UniversityUITests.swift */; };
-		C160C402267C5E7100AD8A29 /* HotReloading in Frameworks */ = {isa = PBXBuildFile; productRef = C160C401267C5E7100AD8A29 /* HotReloading */; };
-		C160C403267C664000AD8A29 /* HotReloading in Embed Frameworks */ = {isa = PBXBuildFile; productRef = C160C401267C5E7100AD8A29 /* HotReloading */; };
+		D3A67E53846AC90961B66DF8 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A67F8A7F3FA934483FF33D /* Course.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +40,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C160C403267C664000AD8A29 /* HotReloading in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -61,6 +59,7 @@
 		C128B936267C32EF00154BB5 /* Automation UniversityUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Automation UniversityUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C128B93A267C32EF00154BB5 /* Automation_UniversityUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Automation_UniversityUITests.swift; sourceTree = "<group>"; };
 		C128B93C267C32EF00154BB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3A67F8A7F3FA934483FF33D /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Course.swift; path = Models/Course.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +67,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C160C402267C5E7100AD8A29 /* HotReloading in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +115,7 @@
 				C128B921267C32EF00154BB5 /* Assets.xcassets */,
 				C128B926267C32EF00154BB5 /* Info.plist */,
 				C128B923267C32EF00154BB5 /* Preview Content */,
+				D3A679BE742CF7413066AD33 /* Models */,
 			);
 			path = "Automation University";
 			sourceTree = "<group>";
@@ -147,6 +146,14 @@
 			path = "Automation UniversityUITests";
 			sourceTree = "<group>";
 		};
+		D3A679BE742CF7413066AD33 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D3A67F8A7F3FA934483FF33D /* Course.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -165,7 +172,6 @@
 			);
 			name = "Automation University";
 			packageProductDependencies = (
-				C160C401267C5E7100AD8A29 /* HotReloading */,
 			);
 			productName = "Automation University";
 			productReference = C128B91A267C32EC00154BB5 /* Automation University.app */;
@@ -213,8 +219,10 @@
 		C128B912267C32EC00154BB5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = "";
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
+				ORGANIZATIONNAME = InstaCode;
 				TargetAttributes = {
 					C128B919267C32EC00154BB5 = {
 						CreatedOnToolsVersion = 12.5;
@@ -239,7 +247,6 @@
 			);
 			mainGroup = C128B911267C32EC00154BB5;
 			packageReferences = (
-				C160C400267C5E7100AD8A29 /* XCRemoteSwiftPackageReference "HotReloading" */,
 			);
 			productRefGroup = C128B91B267C32EC00154BB5 /* Products */;
 			projectDirPath = "";
@@ -285,6 +292,7 @@
 			files = (
 				C128B920267C32EC00154BB5 /* CourseDetail.swift in Sources */,
 				C128B91E267C32EC00154BB5 /* Automation_UniversityApp.swift in Sources */,
+				D3A67E53846AC90961B66DF8 /* Course.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -640,25 +648,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		C160C400267C5E7100AD8A29 /* XCRemoteSwiftPackageReference "HotReloading" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/johnno1962/HotReloading.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		C160C401267C5E7100AD8A29 /* HotReloading */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C160C400267C5E7100AD8A29 /* XCRemoteSwiftPackageReference "HotReloading" */;
-			productName = HotReloading;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C128B912267C32EC00154BB5 /* Project object */;
 }

@@ -7,6 +7,13 @@
 
 import Foundation
 
-struct Course {
-	
+struct Course: Hashable, Codable {
+	var credits: Int8
+    var departmentId: String
+    var courseCode: Int16
+    var courseTitle: String
+    var courseDescription: String
+    var professorName: String
+    var locationName: String
+    var roomNumber: String
 }

@@ -10,7 +10,8 @@ import SwiftUI
 @main
 struct Automation_UniversityApp: App {
     var body: some Scene {
-        WindowGroup {
+        
+        WindowGroup{
             CourseDetail()
         }
     }

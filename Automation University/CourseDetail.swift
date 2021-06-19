@@ -7,8 +7,10 @@
 
 import SwiftUI
 
+
 struct CourseDetail: View {
-var course: Course
+    var course: Course
+    
         var body: some View {
         VStack{
             Divider()
