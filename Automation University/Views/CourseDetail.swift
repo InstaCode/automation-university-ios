@@ -12,6 +12,7 @@ struct CourseDetail: View {
     var course: Course
     
         var body: some View {
+            ScrollView{
         VStack{
             Divider()
             HStack {
@@ -35,6 +36,7 @@ struct CourseDetail: View {
     
     
     }
+        }
 
     #if DEBUG
         @ObservedObject var iO = injectionObserver
