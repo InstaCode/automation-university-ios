@@ -12,7 +12,7 @@ struct Automation_UniversityApp: App {
     var body: some Scene {
         
         WindowGroup{
-            //CourseDetail()
+             CourseList()
         }
     }
 }

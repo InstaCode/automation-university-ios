@@ -10,9 +10,8 @@ import SwiftUI
 
 struct CourseList: View {
     var body: some View {
-        List{
-            CourseRow(course: courses[0])
-            CourseRow(course: courses[1])
+        List(courses, id: \.id){ course in
+            CourseRow(course: course)
         }
     }
 }

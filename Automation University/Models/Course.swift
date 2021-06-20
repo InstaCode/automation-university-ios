@@ -8,7 +8,8 @@
 import Foundation
 import SwiftUI
 
-struct Course: Hashable, Codable {
+struct Course: Hashable, Codable, Identifiable {
+    let id = UUID()
     var url: String
 	var credits: String
     var department: String
