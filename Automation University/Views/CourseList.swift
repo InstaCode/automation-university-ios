@@ -10,8 +10,13 @@ import SwiftUI
 
 struct CourseList: View {
     var body: some View {
-        List(courses, id: \.id){ course in
-            CourseRow(course: course)
+        NavigationView {
+            List(courses, id: \.id){ course in
+                NavigationLink(
+                    destination: CourseDetail(course: course)) {
+                    CourseRow(course: course)
+                }
+            } .navigationTitle("Courses")
         }
     }
 }
