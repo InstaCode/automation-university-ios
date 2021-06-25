@@ -13,7 +13,9 @@ jobs:
 
     steps:
     - name: Update Xcode
-      run: gem install xcode-install
+      run: |
+        sudo rm -rf /Library/Developer/CommandLineTools
+        xcode-select --install
     - uses: actions/checkout@v2
     - name: Build
       run: swift build -v
