@@ -9,13 +9,9 @@ on:
 jobs:
   build:
 
-    runs-on: macos-latest
+    runs-on: macos-11
 
     steps:
-    - name: Update Xcode
-      run: |
-        sudo rm -rf /Library/Developer/CommandLineTools
-        xcode-select --install
     - uses: actions/checkout@v2
     - name: Build
       run: swift build -v
